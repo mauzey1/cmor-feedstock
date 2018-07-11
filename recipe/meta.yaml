@@ -10,7 +10,7 @@ source:
     sha256: 008e8aafc6a6178f50a5396111cb395b9db929ce4a90d28309e45f0969bca803
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k] 
 
  
@@ -25,14 +25,13 @@ requirements:
     - setuptools
     - numpy
     - libnetcdf >4.5
-    - hdf5 >=1.10.2
+    - cdms2
   run:
     - python {{ python }}
     - ossuuid >=1.6
     - udunits2
     - {{ pin_compatible('numpy') }}
     - cdms2
-    - hdf5 >=1.10.2
 
 test:
   commands:
