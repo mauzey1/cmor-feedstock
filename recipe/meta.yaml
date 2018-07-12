@@ -25,14 +25,14 @@ requirements:
     - setuptools
     - numpy
     - libnetcdf >4.5
-    - cdms2
+    - cdms2 >=3.0.1
   run:
     - python {{ python }}
     - ossuuid >=1.6
     - udunits2
     - {{ pin_compatible('numpy') }}
     - libnetcdf >4.5
-    - cdms2
+    - cdms2 >=3.0.1
 
 test:
   commands:
