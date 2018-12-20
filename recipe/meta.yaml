@@ -1,5 +1,5 @@
 {% set name = "cmor" %}
-{% set version = "3.3.3" %}
+{% set version = "3.4.0" %}
 
 package:
     name: {{ name }}
@@ -10,7 +10,7 @@ source:
     sha256: 008e8aafc6a6178f50a5396111cb395b9db929ce4a90d28309e45f0969bca803
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win or py3k] 
 
  
