@@ -6,12 +6,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_numpy1.12:
-        CONFIG: osx_numpy1.12
-      osx_numpy1.13:
-        CONFIG: osx_numpy1.13
-      osx_numpy1.14:
-        CONFIG: osx_numpy1.14
+      osx_:
+        CONFIG: osx_
 
   steps:
   # TODO: Fast finish on azure pipelines?

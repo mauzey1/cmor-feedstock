@@ -6,12 +6,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_numpy1.12:
-        CONFIG: linux_numpy1.12
-      linux_numpy1.13:
-        CONFIG: linux_numpy1.13
-      linux_numpy1.14:
-        CONFIG: linux_numpy1.14
+      linux_:
+        CONFIG: linux_
   steps:
   - script: |
       sudo pip install --upgrade pip
