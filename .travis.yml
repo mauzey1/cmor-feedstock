@@ -9,7 +9,9 @@ osx_image: xcode9.4
 
 env:
   matrix:
-    - CONFIG=osx_
+    - CONFIG=osx_numpy1.12
+    - CONFIG=osx_numpy1.13
+    - CONFIG=osx_numpy1.14
 
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
