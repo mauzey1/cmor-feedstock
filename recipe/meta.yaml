@@ -19,20 +19,22 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - ossuuid 1.6.*
+    - python {{ python }}
+    - ossuuid 1.6.2
     - udunits2
-    - python <3
-    - setuptools
+    - hdf5
+    - libnetcdf
     - numpy
-    - libnetcdf >4.5
-    - cdms2 >=3.0.1
+    - setuptools
+    - cdms2
   run:
     - python {{ python }}
-    - ossuuid >=1.6
+    - ossuuid 1.6.2
     - udunits2
     - {{ pin_compatible('numpy') }}
-    - libnetcdf >4.5
-    - cdms2 >=3.0.1
+    - {{ pin_compatible('hdf5') }}
+    - {{ pin_compatible('libnetcdf') }}
+    - cdms2
 
 test:
   commands:
