@@ -1,7 +1,9 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About cmor
 ==========
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 Home: https://cmor.llnl.gov/
 
@@ -62,6 +64,8 @@ conda search cmor --channel conda-forge
 About conda-forge
 =================
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
 conda-forge GitHub organization. The conda-forge organization contains one repository
@@ -121,4 +125,5 @@ Feedstock Maintainers
 =====================
 
 * [@doutriaux1](https://github.com/doutriaux1/)
+* [@mauzey1](https://github.com/mauzey1/)
 
