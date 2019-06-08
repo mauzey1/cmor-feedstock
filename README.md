@@ -1,13 +1,9 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About cmor
 ==========
 
 Home: https://cmor.llnl.gov/
 
-Package license: 2-Clause BSD
+Package license: BSD-2-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -28,9 +24,48 @@ the output requirements of one MIP, it will be easy to prepare output for other 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cmor-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cmor-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/cmor-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cmor-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+
+<table>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3821&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmor-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_python2.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3821&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmor-feedstock?branchName=master&jobName=linux&configuration=linux_python2.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_python2.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3821&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmor-feedstock?branchName=master&jobName=osx&configuration=osx_python2.7" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows</td>
+    <td>
+      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
+    </td>
+  </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+</table>
 
 Current release info
 ====================
