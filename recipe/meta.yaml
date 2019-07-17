@@ -1,4 +1,4 @@
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
     name: cmor
@@ -9,7 +9,7 @@ source:
     sha256: e700a6d50f435e6ffdedf23bf6832b7d37fe21dc78815e1372f218d1d52bd2cb
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win or py3k] 
 
  
@@ -20,20 +20,24 @@ requirements:
   host:
     - python
     - setuptools
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
     - numpy
     - hdf5
     - libnetcdf
-    - cdms2
+    - netcdf4
+    - six
+    - json-c
   run:
     - python
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
     - {{ pin_compatible('numpy') }}
     - hdf5
     - libnetcdf
-    - cdms2
+    - netcdf4
+    - six
+    - json-c
 
 test:
   commands:
