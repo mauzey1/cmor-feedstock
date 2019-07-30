@@ -1,4 +1,4 @@
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
     name: cmor
@@ -6,11 +6,11 @@ package:
 
 source:
     url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-    sha256: e700a6d50f435e6ffdedf23bf6832b7d37fe21dc78815e1372f218d1d52bd2cb
+    sha256: 37ce11332f9adfd4fa7560dfb358d14b300315221614c4a44c7407297103c62a
 
 build:
-  number: 3
-  skip: True  # [win or py3k] 
+  number: 0
+  skip: True  # [win] 
 
  
 requirements:
@@ -20,20 +20,24 @@ requirements:
   host:
     - python
     - setuptools
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
     - numpy
     - hdf5
     - libnetcdf
-    - cdms2
+    - netcdf4
+    - six
+    - json-c
   run:
     - python
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
     - {{ pin_compatible('numpy') }}
     - hdf5
     - libnetcdf
-    - cdms2
+    - netcdf4
+    - six
+    - json-c
 
 test:
   commands:
