@@ -1,4 +1,4 @@
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
     name: cmor
@@ -6,10 +6,10 @@ package:
 
 source:
     url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-    sha256: e700a6d50f435e6ffdedf23bf6832b7d37fe21dc78815e1372f218d1d52bd2cb
+    sha256: 37ce11332f9adfd4fa7560dfb358d14b300315221614c4a44c7407297103c62a
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win or py3k] 
 
  
