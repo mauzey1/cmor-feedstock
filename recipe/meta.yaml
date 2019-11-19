@@ -27,6 +27,7 @@ requirements:
     - netcdf4
     - six
     - json-c
+    - openblas
   run:
     - python
     - libuuid
@@ -37,6 +38,7 @@ requirements:
     - netcdf4
     - six
     - json-c
+    - openblas
 
 test:
   commands:
