@@ -22,6 +22,8 @@ libuuid:
 - 2.32.1
 numpy:
 - '1.14'
+openblas:
+- 0.3.6
 pin_run_as_build:
   json-c:
     max_pin: x.x
@@ -29,6 +31,8 @@ pin_run_as_build:
     max_pin: x.x.x
   libuuid:
     max_pin: x
+  openblas:
+    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
