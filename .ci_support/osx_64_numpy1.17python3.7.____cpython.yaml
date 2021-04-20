@@ -17,13 +17,13 @@ hdf5:
 json_c:
 - '0.15'
 libnetcdf:
-- 4.7.4
+- 4.8.0
 libuuid:
 - 2.32.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.16'
+- '1.17'
 openblas:
 - 0.3.*
 pin_run_as_build:
