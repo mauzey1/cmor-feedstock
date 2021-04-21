@@ -19,11 +19,11 @@ hdf5:
 json_c:
 - '0.15'
 libnetcdf:
-- 4.7.4
+- 4.8.0
 libuuid:
 - 2.32.1
 numpy:
-- '1.16'
+- '1.17'
 openblas:
 - 0.3.*
 pin_run_as_build:
@@ -35,7 +35,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.8.* *_cpython
 target_platform:
 - linux-64
 zip_keys:
