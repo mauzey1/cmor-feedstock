@@ -16,6 +16,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+    - make   # [unix]
   host:
     - python
     - setuptools
