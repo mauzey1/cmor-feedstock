@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: 140d5c4d94f6775b3e3849f28879aa08c41edc01568908072e9946a9c9c90063
+  sha256: d3808ad9a340201fc4ccd30e2700fa97fbf62299d36fbf276d138a665fd09acb
 
 build:
   number: 0
