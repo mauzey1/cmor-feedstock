@@ -17,7 +17,7 @@ hdf5:
 json_c:
 - '0.16'
 libnetcdf:
-- 4.9.1
+- 4.9.2
 libuuid:
 - '2'
 macos_machine:
