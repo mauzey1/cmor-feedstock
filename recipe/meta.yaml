@@ -1,4 +1,4 @@
-{% set version = "3.7.1" %}
+{% set version = "3.7.2" %}
 
 package:
   name: cmor
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: d3808ad9a340201fc4ccd30e2700fa97fbf62299d36fbf276d138a665fd09acb
+  sha256: 5e19a9be8e6a8bd18a2035772732c34b87b3448319bf0b8fa12ccd4a351b8e86
   patches:
     - 0001-remove-deprecated-numpy-float-int.patch
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
 
 requirements:
