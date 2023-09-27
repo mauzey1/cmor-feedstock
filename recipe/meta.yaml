@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
   sha256: 5e19a9be8e6a8bd18a2035772732c34b87b3448319bf0b8fa12ccd4a351b8e86
+  patches:
+    - 0001-remove-expat-from-configure.patch
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
 
 requirements:
