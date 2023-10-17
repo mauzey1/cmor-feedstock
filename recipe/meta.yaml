@@ -1,4 +1,4 @@
-{% set version = "3.7.2" %}
+{% set version = "3.7.3" %}
 
 package:
   name: cmor
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: 5e19a9be8e6a8bd18a2035772732c34b87b3448319bf0b8fa12ccd4a351b8e86
-  patches:
-    - 0001-remove-expat-from-configure.patch
+  sha256: 14e849ea997814aa038cef635315b71e6b76532cf41dc461e0833549e66e1879
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
 
 requirements:
