@@ -16,6 +16,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+    - python                 # [build_platform != target_platform]
+    - numpy                  # [build_platform != target_platform]
     - make   # [unix]
   host:
     - python
