@@ -9,7 +9,7 @@ source:
   sha256: 5f5a44e660104916dd0a3d0d942234db375d2a4ffb4f4113ec88cfdd93f99ef4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -18,12 +18,12 @@ requirements:
     - {{ compiler('fortran') }}
     - make   # [unix]
   host:
-    - python
+    - python                 # [build_platform != target_platform]
+    - numpy                  # [build_platform != target_platform]
     - pip
     - setuptools
     - libuuid
     - udunits2
-    - numpy
     - hdf5
     - libnetcdf * nompi_*
     - netcdf4
