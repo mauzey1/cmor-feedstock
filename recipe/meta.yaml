@@ -10,9 +10,10 @@ source:
   patches:
     - 0001-Replace-function-deprecated-in-numpy-2.0.patch
     - 0002-Include-signal.h-to-support-sig_atomic_t.patch
+    - 0001-Replace-AC_CHECK_FILE-with-test-f-configure.ac-to-en.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
