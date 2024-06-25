@@ -1,0 +1,25 @@
+From 2fa733a4d9cf8d5c55d5509b00a5f193473c1bbc Mon Sep 17 00:00:00 2001
+From: mauzey1 <mauzey1@llnl.gov>
+Date: Wed, 29 May 2024 11:12:15 -0700
+Subject: [PATCH] Replace function deprecated in numpy 2.0
+
+---
+ setup.py.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py.in b/setup.py.in
+index 745c9e9..4372c2c 100755
+--- a/setup.py.in
++++ b/setup.py.in
+@@ -3,7 +3,7 @@ import numpy
+ import os
+ from setuptools import setup, Extension
+ 
+-include_dirs = [numpy.lib.utils.get_include(),"include","include/cdTime"]
++include_dirs = [numpy.get_include(),"include","include/cdTime"]
+ 
+ library_dirs = [ os.path.join("@prefix@","lib") ,'.']
+ include_dirs.append(os.path.join("@prefix@","include"))
+-- 
+2.39.2 (Apple Git-143)
+
