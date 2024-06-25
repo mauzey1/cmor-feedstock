@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('fortran') }}
     - python                 # [build_platform != target_platform]
     - numpy                  # [build_platform != target_platform]
+    - autoconf    # [unix]
     - gnuconfig   # [unix]
     - make   # [unix]
   host:
