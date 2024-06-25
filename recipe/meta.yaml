@@ -7,14 +7,18 @@ package:
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
   sha256: 5f5a44e660104916dd0a3d0d942234db375d2a4ffb4f4113ec88cfdd93f99ef4
+  patches:
+    - 0001-Replace-function-deprecated-in-numpy-2.0.patch
+    - 0002-Include-signal.h-to-support-sig_atomic_t.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - make   # [unix]
   host:
@@ -34,7 +38,6 @@ requirements:
     - python
     - libuuid
     - udunits2
-    - {{ pin_compatible('numpy') }}
     - hdf5
     - libnetcdf
     - netcdf4
