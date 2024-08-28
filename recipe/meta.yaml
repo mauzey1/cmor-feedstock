@@ -1,4 +1,4 @@
-{% set version = "3.8.0" %}
+{% set version = "3.9.0" %}
 
 package:
   name: cmor
@@ -6,11 +6,7 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: 5f5a44e660104916dd0a3d0d942234db375d2a4ffb4f4113ec88cfdd93f99ef4
-  patches:
-    - 0001-Replace-function-deprecated-in-numpy-2.0.patch
-    - 0002-Include-signal.h-to-support-sig_atomic_t.patch
-    - 0001-Replace-AC_CHECK_FILE-with-test-f-configure.ac-to-en.patch
+  sha256: 20ac62dfdea91d1d0061ad6254c6da578167b65bfd15354e2b4b1042780867fc
 
 build:
   number: 2
