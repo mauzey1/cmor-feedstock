@@ -1,15 +1,15 @@
-{% set version = "3.9.0" %}
+{% set version = "3.10.0" %}
 
 package:
   name: cmor
   version: {{ version }}
 
 source:
-  url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: 20ac62dfdea91d1d0061ad6254c6da578167b65bfd15354e2b4b1042780867fc
+  url: https://github.com/PCMDI/cmor/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 79351f6ca101cfc36a7ef5b81855c49f8a937d827166b19eeecfe7a68e4ccdf0
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
 
 requirements:
