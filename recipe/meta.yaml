@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
+  url: https://github.com/PCMDI/cmor/archive/refs/tags/{{ version }}.tar.gz
   sha256: 79351f6ca101cfc36a7ef5b81855c49f8a937d827166b19eeecfe7a68e4ccdf0
 
 build:
