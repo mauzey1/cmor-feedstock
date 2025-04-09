@@ -14,7 +14,7 @@ autoconf
     --with-uuid=${PREFIX} \
     --with-udunits2=${PREFIX} \
     --with-netcdf=${PREFIX} \
-    --with-libjson-c=${PREFIX} \
+    --with-json-c=${PREFIX} \
     --prefix=${PREFIX}
 make
 make install
