@@ -68,6 +68,8 @@ about:
     common format required by the MIPs. The adoption of CMOR as a standard code for exchanging
     climate data will facilitate participation in MIPs because after learning how to satisfy
     the output requirements of one MIP, it will be easy to prepare output for other MIPs.
+  dev_url: https://github.com/PCMDI/cmor
+  doc_url: https://cmor.llnl.gov/
 
 extra:
   recipe-maintainers:
