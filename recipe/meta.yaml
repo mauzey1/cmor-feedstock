@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/PCMDI/cmor/archive/refs/tags/{{ version }}.tar.gz
   sha256: 8e96659404eecf383872883abbb1e32b850f270adb5f8785fd073733630905c0
+  patches:
+    - 0001-cast-2D-array-of-text-parameter-names.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
