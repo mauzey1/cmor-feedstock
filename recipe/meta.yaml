@@ -11,7 +11,7 @@ source:
     - 0001-cast-2D-array-of-text-parameter-names.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
