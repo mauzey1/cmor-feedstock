@@ -23,7 +23,7 @@ hdf5:
 json_c:
 - '0.18'
 libnetcdf:
-- 4.9.2
+- 4.9.3
 libuuid:
 - '2'
 numpy:
