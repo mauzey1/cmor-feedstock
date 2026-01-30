@@ -9,7 +9,7 @@ source:
   sha256: 0f7504b1e60d71240d7f675785784908ff01ab5589b72f4da76cb3fa857da4e3
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -33,7 +33,6 @@ requirements:
     - hdf5
     - libnetcdf * nompi_*
     - netcdf4
-    - six
     - json-c
     - openblas
   run:
@@ -43,7 +42,6 @@ requirements:
     - hdf5
     - libnetcdf
     - netcdf4
-    - six
     - json-c
     - openblas
 
