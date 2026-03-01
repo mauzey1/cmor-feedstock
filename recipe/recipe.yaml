@@ -21,12 +21,12 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('fortran') }}
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - numpy
         - cross-python_${{ target_platform }}
     - if: unix
-      then: 
+      then:
         - autoconf
         - gnuconfig
         - make
@@ -37,7 +37,6 @@ requirements:
     - libuuid
     - udunits2
     - numpy
-    - hdf5
     # listed twice for conda-smithy's sake
     - libnetcdf
     - libnetcdf * nompi_*
@@ -47,12 +46,8 @@ requirements:
   run:
     - python
     - libuuid
-    - udunits2
-    - hdf5
-    - libnetcdf
     - netcdf4
     - json-c
-    - openblas
 
 tests:
   - script:
