@@ -21,17 +21,15 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('fortran') }}
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: numpy
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
+      then: 
+        - python
+        - numpy
+        - cross-python_${{ target_platform }}
     - if: unix
-      then: autoconf
-    - if: unix
-      then: gnuconfig
-    - if: unix
-      then: make
+      then: 
+        - autoconf
+        - gnuconfig
+        - make
   host:
     - python
     - pip
@@ -40,6 +38,8 @@ requirements:
     - udunits2
     - numpy
     - hdf5
+    # listed twice for conda-smithy's sake
+    - libnetcdf
     - libnetcdf * nompi_*
     - netcdf4
     - json-c
