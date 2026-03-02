@@ -1,28 +1,35 @@
-{% set version = "3.14.0" %}
+schema_version: 1
+
+context:
+  version: 3.14.0
 
 package:
   name: cmor
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/PCMDI/cmor/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/PCMDI/cmor/archive/refs/tags/${{ version }}.tar.gz
   sha256: 0f7504b1e60d71240d7f675785784908ff01ab5589b72f4da76cb3fa857da4e3
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 3
+  skip: win
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - {{ compiler('fortran') }}
-    - python                 # [build_platform != target_platform]
-    - numpy                  # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - autoconf    # [unix]
-    - gnuconfig   # [unix]
-    - make   # [unix]
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('fortran') }}
+    - if: build_platform != target_platform
+      then:
+        - python
+        - numpy
+        - cross-python_${{ target_platform }}
+    - if: unix
+      then:
+        - autoconf
+        - gnuconfig
+        - make
   host:
     - python
     - pip
@@ -30,7 +37,8 @@ requirements:
     - libuuid
     - udunits2
     - numpy
-    - hdf5
+    # listed twice for conda-smithy's sake
+    - libnetcdf
     - libnetcdf * nompi_*
     - netcdf4
     - json-c
@@ -38,22 +46,18 @@ requirements:
   run:
     - python
     - libuuid
-    - udunits2
-    - hdf5
-    - libnetcdf
     - netcdf4
     - json-c
-    - openblas
 
-test:
-  commands:
-    - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"
+tests:
+  - script:
+      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"
 
 about:
-  home: https://cmor.llnl.gov/
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: “Climate Model Output Rewriter” is a C library, with  Fortran 90 and Python bindings. CMOR is used to produce CF-compliant[3] netCDF[4] files. The structure of the files created by CMOR and the metadata they contain fulfill the requirements of many of the climate community’s standard model experiments (which are
+  summary: |
+    “Climate Model Output Rewriter” is a C library, with  Fortran 90 and Python bindings. CMOR is used to produce CF-compliant[3] netCDF[4] files. The structure of the files created by CMOR and the metadata they contain fulfill the requirements of many of the climate community’s standard model experiments (which are
     referred to here as “MIPs”[5] and include, for example, AMIP, PMIP, APE, and IPCC [DN1] scenario runs).
   description: |
     CMOR was not designed to serve as an all-purpose writer of CF-compliant netCDF files,
@@ -66,8 +70,9 @@ about:
     common format required by the MIPs. The adoption of CMOR as a standard code for exchanging
     climate data will facilitate participation in MIPs because after learning how to satisfy
     the output requirements of one MIP, it will be easy to prepare output for other MIPs.
-  dev_url: https://github.com/PCMDI/cmor
-  doc_url: https://cmor.llnl.gov/
+  homepage: https://cmor.llnl.gov/
+  repository: https://github.com/PCMDI/cmor
+  documentation: https://cmor.llnl.gov/
 
 extra:
   recipe-maintainers:
