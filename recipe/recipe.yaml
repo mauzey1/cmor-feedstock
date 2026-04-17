@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 3.14.1
+  version: 3.14.2
 
 package:
   name: cmor
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 9b32f4cd763c3e3a3436025ceb449b5adf67c5e07af6bfe8c849e268c335575b
+  sha256: 654a18aba5f517b0ee437bd2e09969608f263bf71e85037b182f86d52231e87a
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
